@@ -37,6 +37,11 @@
             button1 = new Button();
             yearsInput = new TextBox();
             label4 = new Label();
+            listView1 = new ListView();
+            nr = new ColumnHeader();
+            creditpart = new ColumnHeader();
+            interestpart = new ColumnHeader();
+            annuited = new ColumnHeader();
             SuspendLayout();
             // 
             // label1
@@ -113,11 +118,42 @@
             label4.TabIndex = 7;
             label4.Text = "Numbers of credit year:";
             // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { nr, creditpart, interestpart, annuited });
+            listView1.Location = new Point(460, 72);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(674, 547);
+            listView1.TabIndex = 9;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // nr
+            // 
+            nr.Text = "Nr";
+            nr.Width = 90;
+            // 
+            // creditpart
+            // 
+            creditpart.Text = "Credit Part";
+            creditpart.Width = 190;
+            // 
+            // interestpart
+            // 
+            interestpart.Text = "Interest Part";
+            interestpart.Width = 190;
+            // 
+            // annuited
+            // 
+            annuited.Text = "Annuited Installment";
+            annuited.Width = 190;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 696);
+            Controls.Add(listView1);
             Controls.Add(yearsInput);
             Controls.Add(label4);
             Controls.Add(button1);
@@ -144,5 +180,10 @@
         private Button button1;
         private TextBox yearsInput;
         private Label label4;
+        private ListView listView1;
+        private ColumnHeader creditpart;
+        private ColumnHeader interestpart;
+        private ColumnHeader annuited;
+        private ColumnHeader nr;
     }
 }
